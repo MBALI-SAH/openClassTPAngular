@@ -1,0 +1,14 @@
+<div class="face-snap-card mx-5">
+    <h2>
+        {{ title }}
+    </h2>
+    <p>Mise en ligne {{ createDate }}</p>
+    <img [src]="imageUrl" [alt]="title" srcset="" >
+    <p>
+        {{ description }}
+    </p>
+    <p>
+        <button class="px-3" (click)="onAddSnap()">On click</button>
+        {{ snap }}
+    </p>
+</div>
