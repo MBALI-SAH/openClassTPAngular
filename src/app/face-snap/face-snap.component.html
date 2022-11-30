@@ -1,14 +1,14 @@
 <div class="face-snap-card mx-5">
     <h2>
-        {{ title }}
+        {{ faceSnap.title }}
     </h2>
-    <p>Mise en ligne {{ createDate }}</p>
-    <img [src]="imageUrl" [alt]="title" srcset="" >
+    <p>Mise en ligne {{ faceSnap.createDate }}</p>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" srcset="" >
     <p>
-        {{ description }}
+        {{ faceSnap.description }}
     </p>
     <p>
         <button class="px-3" (click)="onSnap()">{{ buttonText }}</button>
-        {{ snap }}
+        {{ faceSnap.snap }}
     </p>
 </div>
