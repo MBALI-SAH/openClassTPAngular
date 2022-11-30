@@ -1,14 +1,17 @@
-<div class="face-snap-card mx-5">
+<div class="face-snap-card" [ngClass]="{snapped: buttonText === 'Oops, unSnap ! '}">
     <h2>
-        {{ faceSnap.title }}
+        {{ faceSnap.title | titlecase }}
     </h2>
-    <p>Mise en ligne {{ faceSnap.createDate }}</p>
+    <p>Mise en ligne {{ faceSnap.createDate | date: 'à HH:mm, le d MMMM yyyy'   }}</p>
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" srcset="" >
     <p>
         {{ faceSnap.description }}
     </p>
+    <p *ngIf="faceSnap.location">
+        Photo prise à {{ faceSnap.location }}
+    </p>
     <p>
         <button class="px-3" (click)="onSnap()">{{ buttonText }}</button>
-        {{ faceSnap.snap }}
+        <span [ngStyle]="{color:'rgb(0,'+faceSnap.snap+',0)'}">{{ faceSnap.snap }} </span>
     </p>
 </div>

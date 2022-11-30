@@ -4,7 +4,7 @@ import { FaceSnap } from '../models/face-snap.model.component';
 @Component({
   selector: 'app-face-snap',
   templateUrl: './face-snap.component.html',
-  styleUrls: ['./face-snap.component.css']
+  styleUrls: ['./face-snap.component.scss']
 })
 export class FaceSnapComponent implements OnInit {
 
